@@ -124,7 +124,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Mm2-xC-aGf" secondAttribute="trailing" constant="16" id="1Z2-j7-NeJ"/>
                                             <constraint firstItem="5YJ-ZP-vTP" firstAttribute="top" secondItem="HV5-Py-C28" secondAttribute="top" constant="142" id="9DW-Fd-PTZ"/>
@@ -248,7 +248,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lab-2Q-gje"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aA0-O0-IyZ" firstAttribute="top" secondItem="FDw-Nw-b7R" secondAttribute="bottom" constant="46" id="2ai-aL-Bdm"/>
                             <constraint firstItem="FDw-Nw-b7R" firstAttribute="leading" secondItem="Lab-2Q-gje" secondAttribute="leading" constant="16" id="Gbl-hj-tc6"/>
@@ -316,7 +316,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VW6-da-wAw" secondAttribute="trailing" constant="20" symbolic="YES" id="1vs-ED-awB"/>
                                         <constraint firstItem="VW6-da-wAw" firstAttribute="leading" secondItem="l0f-fe-HGL" secondAttribute="trailing" constant="8" symbolic="YES" id="1ys-LS-en8"/>
