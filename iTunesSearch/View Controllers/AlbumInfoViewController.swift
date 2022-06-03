@@ -32,7 +32,9 @@ class AlbumInfoViewController: UIViewController {
         NetworkManager.shared.fetchImage(album: album, imageView: imageAlbum)
         albumName.text = album.collectionName
         artistName.text = album.artistName
-        yearAlbum.text = album.releaseDate
+        let index = album.releaseDate.firstIndex(of: "T") ?? album.releaseDate.endIndex
+        let date = album.releaseDate[..<index]
+        yearAlbum.text = String(date)
     }
     private func fetchSongs(album: Album?) {
         guard let album = album else { return }
