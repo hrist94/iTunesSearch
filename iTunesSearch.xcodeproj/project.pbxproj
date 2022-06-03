@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2E248FDD284839880004BC73 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E248FDC284839880004BC73 /* Alert.swift */; };
+		2E4E5E1C28497805006474F5 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E5E1B28497805006474F5 /* DataModels.swift */; };
+		2E4E5E2228498487006474F5 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E5E2128498487006474F5 /* AlbumsTableViewCell.swift */; };
+		2E537F4C2849243500003614 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537F4B2849243500003614 /* CustomButton.swift */; };
+		2E537F4F2849296F00003614 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537F4E2849296F00003614 /* NetworkManager.swift */; };
+		2E537F512849298000003614 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E537F502849298000003614 /* UserDefaultManager.swift */; };
+		2E8465652849CC2300F68E30 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8465642849CC2300F68E30 /* TrackTableViewCell.swift */; };
 		2EAD6A852847F8BB009ED6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD6A842847F8BB009ED6AF /* AppDelegate.swift */; };
 		2EAD6A872847F8BB009ED6AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD6A862847F8BB009ED6AF /* SceneDelegate.swift */; };
 		2EAD6A8C2847F8BB009ED6AF /* AlbumsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD6A8A2847F8BB009ED6AF /* AlbumsView.storyboard */; };
@@ -17,10 +23,19 @@
 		2EBD510D2847FF87003BA187 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD510C2847FF87003BA187 /* RegViewController.swift */; };
 		2EBD510F2847FF9A003BA187 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD510E2847FF9A003BA187 /* LoginViewController.swift */; };
 		2EBD511128481310003BA187 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD511028481310003BA187 /* UserInfo.swift */; };
+		2EDD22C328493A5000A83230 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD22C228493A5000A83230 /* Validation.swift */; };
+		2EDD22C72849621900A83230 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD22C62849621900A83230 /* UserInfoViewController.swift */; };
+		2EDD22C9284965F100A83230 /* AlbumInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD22C8284965F100A83230 /* AlbumInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E248FDC284839880004BC73 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		2E4E5E1B28497805006474F5 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		2E4E5E2128498487006474F5 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
+		2E537F4B2849243500003614 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2E537F4E2849296F00003614 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2E537F502849298000003614 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		2E8465642849CC2300F68E30 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		2EAD6A812847F8BB009ED6AF /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EAD6A842847F8BB009ED6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EAD6A862847F8BB009ED6AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +47,9 @@
 		2EBD510C2847FF87003BA187 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		2EBD510E2847FF9A003BA187 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2EBD511028481310003BA187 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2EDD22C228493A5000A83230 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		2EDD22C62849621900A83230 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		2EDD22C8284965F100A83230 /* AlbumInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E537F4D2849295900003614 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2E537F4E2849296F00003614 /* NetworkManager.swift */,
+				2E537F502849298000003614 /* UserDefaultManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2EAD6A782847F8BB009ED6AF = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +91,12 @@
 		2EAD6A832847F8BB009ED6AF /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				2EAD6A9C2847F9C8009ED6AF /* Application */,
-				2EAD6A992847F8FB009ED6AF /* Models */,
-				2EAD6A9B2847F91D009ED6AF /* Views */,
-				2EAD6A9A2847F908009ED6AF /* View Controllers */,
 				2EAD6A982847F8E2009ED6AF /* Storyboards */,
+				2EAD6A992847F8FB009ED6AF /* Models */,
+				2EAD6A9A2847F908009ED6AF /* View Controllers */,
+				2EAD6A9B2847F91D009ED6AF /* Views */,
+				2E537F4D2849295900003614 /* Services */,
+				2EAD6A9C2847F9C8009ED6AF /* Application */,
 			);
 			path = iTunesSearch;
 			sourceTree = "<group>";
@@ -86,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				2EBD511028481310003BA187 /* UserInfo.swift */,
+				2EDD22C228493A5000A83230 /* Validation.swift */,
+				2E4E5E1B28497805006474F5 /* DataModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,6 +126,8 @@
 				2EBD510A2847FE3E003BA187 /* AlbumsViewController.swift */,
 				2EBD510C2847FF87003BA187 /* RegViewController.swift */,
 				2EBD510E2847FF9A003BA187 /* LoginViewController.swift */,
+				2EDD22C62849621900A83230 /* UserInfoViewController.swift */,
+				2EDD22C8284965F100A83230 /* AlbumInfoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -104,6 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				2E248FDC284839880004BC73 /* Alert.swift */,
+				2E537F4B2849243500003614 /* CustomButton.swift */,
+				2E4E5E2128498487006474F5 /* AlbumsTableViewCell.swift */,
+				2E8465642849CC2300F68E30 /* TrackTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,11 +225,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E537F4F2849296F00003614 /* NetworkManager.swift in Sources */,
+				2EDD22C72849621900A83230 /* UserInfoViewController.swift in Sources */,
 				2EAD6A852847F8BB009ED6AF /* AppDelegate.swift in Sources */,
+				2EDD22C328493A5000A83230 /* Validation.swift in Sources */,
+				2EDD22C9284965F100A83230 /* AlbumInfoViewController.swift in Sources */,
 				2EAD6A872847F8BB009ED6AF /* SceneDelegate.swift in Sources */,
 				2EBD510B2847FE3E003BA187 /* AlbumsViewController.swift in Sources */,
+				2E4E5E1C28497805006474F5 /* DataModels.swift in Sources */,
+				2E4E5E2228498487006474F5 /* AlbumsTableViewCell.swift in Sources */,
+				2E537F512849298000003614 /* UserDefaultManager.swift in Sources */,
 				2EBD510F2847FF9A003BA187 /* LoginViewController.swift in Sources */,
+				2E537F4C2849243500003614 /* CustomButton.swift in Sources */,
 				2EBD511128481310003BA187 /* UserInfo.swift in Sources */,
+				2E8465652849CC2300F68E30 /* TrackTableViewCell.swift in Sources */,
 				2EBD510D2847FF87003BA187 /* RegViewController.swift in Sources */,
 				2E248FDD284839880004BC73 /* Alert.swift in Sources */,
 			);

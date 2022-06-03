@@ -8,15 +8,12 @@
 import UIKit
 
 class RegViewController: UIViewController {
+ 
+//MARK: - Properties
+    let datePicker = UIDatePicker()
     
-    var datePicker: UIDatePicker {
-        let picker = UIDatePicker()
-        picker.datePickerMode = .date
-        picker.preferredDatePickerStyle = .wheels
-        return picker
-        
-    }
-//-MARK: Outlets
+    
+//MARK: - Outlets
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var secondNameTextField: UITextField!
@@ -24,23 +21,25 @@ class RegViewController: UIViewController {
     @IBOutlet var phoneNumberTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var labelPass: UILabel!
+    @IBOutlet var regLabel: UILabel!
     
     
-    
+//MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelPass.isHidden = true
+        regLabel.isHidden = true
         createDatePicker()
         registerForKeyboardNotifications()
         let tapScreen = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapScreen.cancelsTouchesInView = false
         view.addGestureRecognizer(tapScreen)
+        self.passwordTextField.textContentType = .oneTimeCode
         phoneNumberTextField.delegate = self
         firstNameTextField.delegate = self
+        
     }
    
-    
+//MARK: -  Actions
     @IBAction func formatPhoneNumber(_ sender: UITextField) {
         phoneNumberTextField.text = "+7"
     }
@@ -50,13 +49,33 @@ class RegViewController: UIViewController {
         let engChar = "qwertyuiopasdfghjklzxcvbnm"
         guard engChar.contains(lastChar) else {
             sender.text?.removeLast()
-            Alert.showAlert("Error!", "You can only use the English alphabet", for: self)
+            Alert.showAlert("Error!", "You can use only the English alphabet", for: self)
             return
         }
         
     }
     
+    @IBAction func signUpButton(_ sender: UIButton) {
+        let firstName = firstNameTextField.text ?? ""
+        let secondName = secondNameTextField.text ?? ""
+        let phoneNumber = phoneNumberTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+
+        if !firstName.isEmpty && !secondName.isEmpty && phoneNumber.count == 17 && !email.isEmpty && Validator.isPassValid(password) && Validator.ageValid(datePicker) {
+            UserData.shared.saveUser(firstName, secondName, datePicker.date, phoneNumber, email, password)
+            regLabel.isHidden = false
+        } else {
+            Alert.showAlert("Error!", "Check that the fields are filled in correctly and your age must be 18+", for: self)
+        }
+        
+    }
+    @IBAction func doneButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
     
+    
+//MARK: - Private funcs
     private func formatPhoneNumber(number: String) -> String {
         let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
         let mask = "+X (XXX) XXX-XXXX"
@@ -72,12 +91,14 @@ class RegViewController: UIViewController {
         }
         return result
     }
+    
+//MARK: - Deinit
     deinit {
         removeKeyboardNotific()
     }
 }
 
-// -MARK: ScrollView Keyboard
+//MARK: - ScrollView Keyboard
 
 extension RegViewController {
     func registerForKeyboardNotifications() {
@@ -100,11 +121,13 @@ extension RegViewController {
     }
 }
 
-//-MARK: add Date Picker
+//MARK: - add Date Picker
 
 extension RegViewController {
     
     private func createDatePicker() {
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
@@ -117,12 +140,12 @@ extension RegViewController {
         formmater.dateStyle = .medium
         formmater.timeStyle = .none
         
-        dateOfBirthTextField.text = formmater.string(from: datePicker.date)
+        self.dateOfBirthTextField.text = formmater.string(from: datePicker.date)
         self.view.endEditing(true)
     }
 }
 
-//-MARK: Dismiss keyboard func
+//MARK: - Dismiss keyboard func
 
 extension RegViewController {
     
@@ -131,7 +154,7 @@ extension RegViewController {
     }
 }
 
-//-MARK: Phone Number formatting
+//MARK: - Phone Number formatting
 extension RegViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -144,3 +167,4 @@ extension RegViewController: UITextFieldDelegate {
         }
     }
 }
+

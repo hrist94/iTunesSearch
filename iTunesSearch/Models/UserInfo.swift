@@ -8,12 +8,17 @@
 import Foundation
 
 
-struct UserInfo {
+struct UserInfo: Codable {
     
-    var firstName: String
-    var secondName: String
-    var dateOfBirth: Date
-    var phoneNumber: String
-    var email: String
-    var password: String
+    let firstName: String
+    let secondName: String
+    let dateOfBirth: Date
+    let phoneNumber: String
+    let email: String
+    let password: String
+}
+
+enum UserKey: String {
+    case user
+    case currentUser
 }
